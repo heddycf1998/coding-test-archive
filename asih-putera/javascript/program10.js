@@ -1,0 +1,4 @@
+const nama = "Asih Putera"
+for (let i = 1; i <= 10; i++) {
+    console.log(`${nama} ${i}`) 
+}
