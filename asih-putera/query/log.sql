@@ -137,3 +137,37 @@ CREATE TABLE job_history (
 
 INSERT INTO job_history VALUES (100, '2025-02-05', '2026-02-03', 'AD_PRES', 10);
 INSERT INTO job_history VALUES (101, '2025-02-05', '2025-12-27', 'IT_PROG', 20);
+
+INSERT INTO employees 
+(
+    EMPLOYEE_ID, 
+    FIRST_NAME, 
+    LAST_NAME, 
+    EMAIL, 
+    PHONE_NUMBER, 
+    HIRE_DATE, 
+    JOB_ID, 
+    SALARY, 
+    COMMISSION_PCT, 
+    MANAGER_ID, 
+    DEPARTMENT_ID
+) 
+VALUES
+(103, 'Dedi', 'Kurniawan', 'dedi@mail.com', '081234567803', '2024-02-10', 'IT_PROG', 12000000, NULL, 101, 20),
+(104, 'Eka', 'Sari', 'eka@mail.com', '081234567804', '2024-03-05', 'SA_REP', 7500000, 0.1, 100, 30),
+(105, 'Fajar', 'Hidayat', 'fajar@mail.com', '081234567805', '2024-03-20', 'SA_REP', 8200000, 0.1, 100, 30),
+(106, 'Gita', 'Permata', 'gita@mail.com', '081234567806', '2024-04-12', 'IT_PROG', 14500000, NULL, 101, 20),
+(107, 'Hadi', 'Saputra', 'hadi@mail.com', '081234567807', '2024-05-01', 'SA_REP', 9800000, 0.1, 100, 30),
+(108, 'Indah', 'Lestari', 'indah@mail.com', '081234567808', '2024-05-15', 'IT_PROG', 8500000, NULL, 101, 20),
+(109, 'Joko', 'Susilo', 'joko@mail.com', '081234567809', '2024-06-01', 'SA_REP', 7200000, 0.05, 100, 30),
+(110, 'Kiki', 'Amalia', 'kiki@mail.com', '081234567810', '2024-06-10', 'IT_PROG', 11000000, NULL, 101, 20),
+(111, 'Lutfi', 'Hakim', 'lutfi@mail.com', '081234567811', '2024-07-01', 'IT_PROG', 13000000, NULL, 101, 20),
+(112, 'Maya', 'Santi', 'maya@mail.com', '081234567812', '2024-07-20', 'SA_REP', 8800000, 0.15, 100, 30),
+(113, 'Nanda', 'Putra', 'nanda@mail.com', '081234567813', '2024-08-05', 'IT_PROG', 10500000, NULL, 101, 20),
+(114, 'Oky', 'Pratama', 'oky@mail.com', '081234567814', '2024-08-15', 'SA_REP', 7000000, 0.1, 100, 30),
+(115, 'Putri', 'Utami', 'putri@mail.com', '081234567815', '2024-09-01', 'IT_PROG', 14000000, NULL, 101, 20),
+(116, 'Qori', 'Anwar', 'qori@mail.com', '081234567816', '2024-09-10', 'SA_REP', 9500000, 0.05, 100, 30),
+(117, 'Rian', 'Fauzi', 'rian@mail.com', '081234567817', '2024-10-01', 'IT_PROG', 9200000, NULL, 101, 20),
+(118, 'Siska', 'Amel', 'siska@mail.com', '081234567818', '2024-10-15', 'SA_REP', 7800000, 0.2, 100, 30),
+(119, 'Toni', 'Irawan', 'toni@mail.com', '081234567819', '2024-11-01', 'IT_PROG', 11500000, NULL, 101, 20),
+(120, 'Umar', 'Said', 'umar@mail.com', '081234567820', '2024-11-20', 'SA_REP', 8400000, 0.1, 100, 30)
