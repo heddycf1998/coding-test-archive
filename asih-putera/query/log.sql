@@ -171,3 +171,40 @@ VALUES
 (118, 'Siska', 'Amel', 'siska@mail.com', '081234567818', '2024-10-15', 'SA_REP', 7800000, 0.2, 100, 30),
 (119, 'Toni', 'Irawan', 'toni@mail.com', '081234567819', '2024-11-01', 'IT_PROG', 11500000, NULL, 101, 20),
 (120, 'Umar', 'Said', 'umar@mail.com', '081234567820', '2024-11-20', 'SA_REP', 8400000, 0.1, 100, 30)
+
+INSERT INTO employees (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID) VALUES
+(121, 'Vina', 'Pandu', 'vina@mail.com', '081234567821', '2024-12-05', 'IT_PROG', 13800000, NULL, 101, 20),
+(122, 'Agus', 'Prasetyo', 'agus@mail.com', '081234567822', '2025-01-20', 'IT_PROG', 11000000, NULL, 101, 20),
+(123, 'Bambang', 'Sutedjo', 'bambang@mail.com', '081234567823', '2025-01-25', 'SA_REP', 8500000, 0.1, 100, 30),
+(124, 'Citra', 'Lestari', 'citra@mail.com', '081234567824', '2025-02-05', 'IT_PROG', 14200000, NULL, 101, 20),
+(125, 'Dewi', 'Anggraini', 'dewi@mail.com', '081234567825', '2025-02-15', 'SA_REP', 7200000, 0.15, 100, 30),
+(126, 'Endang', 'Suryani', 'endang@mail.com', '081234567826', '2025-03-01', 'IT_PROG', 9800000, NULL, 101, 20),
+(127, 'Farhan', 'Maulana', 'farhan@mail.com', '081234567827', '2025-03-10', 'SA_REP', 9100000, 0.1, 100, 30),
+(128, 'Gilang', 'Ramadhan', 'gilang@mail.com', '081234567828', '2025-03-25', 'IT_PROG', 12500000, NULL, 101, 20),
+(129, 'Hana', 'Fadhilah', 'hana@mail.com', '081234567829', '2025-04-05', 'SA_REP', 7800000, 0.1, 100, 30),
+(130, 'Irfan', 'Bachdim', 'irfan@mail.com', '081234567830', '2025-04-15', 'IT_PROG', 14000000, NULL, 101, 20),
+(131, 'Joni', 'Iskandar', 'joni@mail.com', '081234567831', '2025-05-01', 'SA_REP', 8900000, 0.2, 100, 30),
+(132, 'Kania', 'Putri', 'kania@mail.com', '081234567832', '2025-05-12', 'IT_PROG', 10200000, NULL, 101, 20),
+(133, 'Lucky', 'Perdana', 'lucky@mail.com', '081234567833', '2025-05-20', 'SA_REP', 7400000, 0.1, 100, 30),
+(134, 'Momon', 'Sulaeman', 'momon@mail.com', '081234567834', '2025-06-05', 'IT_PROG', 11800000, NULL, 101, 20),
+(135, 'Nina', 'Zatulini', 'nina@mail.com', '081234567835', '2025-06-15', 'SA_REP', 9600000, 0.15, 100, 30),
+(136, 'Oman', 'Abdurahman', 'oman@mail.com', '081234567836', '2025-07-01', 'IT_PROG', 8700000, NULL, 101, 20),
+(137, 'Pandu', 'Winata', 'pandu@mail.com', '081234567837', '2025-07-10', 'SA_REP', 8100000, 0.1, 100, 30),
+(138, 'Qia', 'Salsabila', 'qia@mail.com', '081234567838', '2025-07-20', 'IT_PROG', 14800000, NULL, 101, 20),
+(139, 'Raka', 'Bumigora', 'raka@mail.com', '081234567839', '2025-08-05', 'SA_REP', 7000000, 0.05, 100, 30),
+(140, 'Santi', 'Ariyani', 'santi@mail.com', '081234567840', '2025-08-15', 'IT_PROG', 12200000, NULL, 101, 20),
+(141, 'Tegar', 'Septian', 'tegar@mail.com', '081234567841', '2025-09-01', 'SA_REP', 9900000, 0.2, 100, 30),
+(142, 'Uli', 'Herdiansyah', 'uli@mail.com', '081234567842', '2025-09-10', 'IT_PROG', 13000000, NULL, 101, 20),
+(143, 'Vicky', 'Nitinegoro', 'vicky@mail.com', '081234567843', '2025-09-20', 'SA_REP', 7600000, 0.1, 100, 30),
+(144, 'Wawan', 'Gunawan', 'wawan@mail.com', '081234567844', '2025-10-05', 'IT_PROG', 9400000, NULL, 101, 20),
+(145, 'Xena', 'Warrior', 'xena@mail.com', '081234567845', '2025-10-15', 'SA_REP', 8800000, 0.15, 100, 30),
+(146, 'Yadi', 'Sembako', 'yadi@mail.com', '081234567846', '2025-11-01', 'IT_PROG', 11500000, NULL, 101, 20),
+(147, 'Zizi', 'Zubir', 'zizi@mail.com', '081234567847', '2025-11-10', 'SA_REP', 7300000, 0.1, 100, 30),
+(148, 'Asep', 'Surasep', 'asep@mail.com', '081234567848', '2025-11-20', 'IT_PROG', 10800000, NULL, 101, 20),
+(149, 'Bejo', 'Mulyono', 'bejo@mail.com', '081234567849', '2025-12-05', 'SA_REP', 9200000, 0.1, 100, 30),
+(150, 'Cici', 'Paramida', 'cici@mail.com', '081234567850', '2025-12-15', 'IT_PROG', 14500000, NULL, 101, 20);
+
+
+UPDATE departments 
+SET DEPARTMENT_NAME = 'IT' 
+WHERE DEPARTMENT_ID = 20;
