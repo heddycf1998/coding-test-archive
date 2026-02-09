@@ -1,0 +1,7 @@
+SELECT
+	 e.EMPLOYEE_ID,
+     e.SALARY
+     
+FROM employees e 
+ORDER BY e.SALARY DESC
+LIMIT 3;
