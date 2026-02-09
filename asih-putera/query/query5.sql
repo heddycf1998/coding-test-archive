@@ -1,0 +1,8 @@
+SELECT
+	 MONTHNAME(e.HIRE_DATE) AS 'Nama Bulan',
+     COUNT(*) AS 'Jumlah'
+     
+FROM employees e
+GROUP BY MONTHNAME(e.HIRE_DATE)
+HAVING COUNT(*) > 10
+ORDER BY MONTH(e.HIRE_DATE) ASC;
