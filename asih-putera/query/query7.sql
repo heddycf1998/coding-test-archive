@@ -1,6 +1,6 @@
 SELECT
 	j.JOB_TITLE,
-    CONCAT('Rp ', FORMAT(AVG(e.SALARY), 0, 'id-ID'))
+    CONCAT('Rp ', FORMAT(AVG(e.SALARY), 0, 'id_ID'))
 FROM employees e
 JOIN jobs j ON e.JOB_ID = j.JOB_ID
 GROUP BY j.JOB_TITLE;
