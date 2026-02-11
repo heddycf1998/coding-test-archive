@@ -345,3 +345,8 @@ INSERT INTO employees (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, 
 (248, 'Firman', 'Utina', 'firman.u@email.com', '081556677818', '2025-08-15', 'IT_PROG', 8650000, 10),
 (249, 'Ponaryo', 'Astaman', 'ponaryo.a@email.com', '081556677819', '2025-08-20', 'SA_REP', 7450000, 10),
 (250, 'Kurnia', 'Meiga', 'meiga.k@email.com', '081556677820', '2025-09-01', 'SA_REP', 8050000, 10);
+
+
+UPDATE employees 
+SET HIRE_DATE = '2010-01-01'
+WHERE EMPLOYEE_ID IN (200, 201)
