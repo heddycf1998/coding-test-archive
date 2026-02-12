@@ -1,3 +1,5 @@
+// Write a function which calculates the average of the numbers in a given array.
+
 function findAverage(array) {
   if (array.length === 0) {
     return 0;  
