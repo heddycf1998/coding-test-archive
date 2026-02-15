@@ -15,7 +15,7 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 
 
 
-// 
+// Sample Test :
 const assert = require("chai").assert;
 
 describe("zeroFill", function() {
