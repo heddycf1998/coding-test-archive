@@ -1,0 +1,28 @@
+function findSmallestInt(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] < arr[j]) {
+        let temp = arr[j]
+        arr[j] = arr[i]
+        arr[i] = temp
+      }
+    }
+  }
+  return arr[0];
+}
+
+
+
+
+// Sample Test : 
+import { assert } from "chai";
+
+describe("Smallest Integer Tests", () => {
+  it("Fixed Tests", () => {
+    assert.strictEqual(findSmallestInt([78,56,232,12,8]),8, `findSmallestInt([78,56,232,12,8])`);
+    assert.strictEqual(findSmallestInt([78,56,232,12,18]),12, `findSmallestInt([78,56,232,12,18])`);
+    assert.strictEqual(findSmallestInt([78,56,232,412,228]),56, `findSmallestInt([78,56,232,412,228])`);
+    assert.strictEqual(findSmallestInt([78,56,232,12,0]),0, `findSmallestInt([78,56,232,12,0])`);
+    assert.strictEqual(findSmallestInt([1,56,232,12,8]),1, `findSmallestInt([1,56,232,12,8])`);
+  });
+});
