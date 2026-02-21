@@ -10,13 +10,14 @@
 // printer_error(s) => "8/22"
 
 function printerError(s) {
+    let sLower = s.toLowerCase()
     let point = 0
-    for (let i = 0; i < s.length; i++) {
+    for (let i = 0; i < sLower.length; i++) {
         if (s[i].charCodeAt(0) > 109) {
              point = point + 1
         }
     }
-    return `${point}/${s.length}`
+    return `${point}/${sLower.length}`
 }
 
 
