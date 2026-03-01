@@ -8,14 +8,18 @@
 // ('/', 49, 7) --> 7
 
 function basicOp(operation, value1, value2){
-    const operator = ['+', '-', '/', '*']
-    let result = 0
-    for (let i = 0; i < operator.length; i++) {
-        if (operation === operator[i]) {
-            result = eval(value1 + operation  + value2) 
-        }
+    if (operation === '+') {
+      return value1 + value2
     }
-    return result
+    if (operation === '-') {
+      return value1 - value2
+    }
+    if (operation === '/') {
+      return value1 / value2
+    }
+    if (operation === '*') {
+      return value1 * value2
+    }
 }
 
 
