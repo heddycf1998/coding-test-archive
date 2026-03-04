@@ -13,7 +13,7 @@ function addBinary(a,b) {
     let tambah = a + b
     
     if (tambah === 0) {
-        return 0
+        return '0'
     }
 
     let biner = ''
