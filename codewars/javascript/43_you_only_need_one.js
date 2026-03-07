@@ -14,9 +14,10 @@ function check(a, x) {
     return false
 }
 
-check([66, 101], 66)
 
 
+
+// Sample Test :
 import { assert } from "chai";
 
 describe("Basic tests",() =>{
