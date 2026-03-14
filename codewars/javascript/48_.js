@@ -20,7 +20,7 @@ function duplicateCount(text){
 
 duplicateCount("")
 duplicateCount("abcde")
-// duplicateCount("aabbcde")
+duplicateCount("aabbcde")
 // duplicateCount("aabBcde")
 // duplicateCount("Indivisibility")
 // duplicateCount("Indivisibilities") 
