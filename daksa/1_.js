@@ -1,3 +1,6 @@
+// Sebenarnya test nya tuh coding tulis tangan dan gak boleh liat ke HP / Internet / Laptop (Tanpa alat bantu)
+// Jadi nulis codingannya di kertas polio bergaris dan dikasih kertas coretan
+
 function calculatePoint(membershipType, amount) {
     let point = 0
     let totalPoint = 0
