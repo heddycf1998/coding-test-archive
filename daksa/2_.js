@@ -5,7 +5,39 @@ function createAccount() {
     let statusActive
 
     // setter & getter
+    // setter
+    this.setNomorAccount = function(inputNomorAccount) {
+        nomorAccount = inputNomorAccount
+    }
 
+    this.setNama = function(inputNama) {
+        nama = inputNama
+    }
+
+    this.setNik = function(inputNik) {
+        nik = inputNik
+    }
+
+    this.setStatusActive = function(inputStatusActive) {
+        statusActive = inputStatusActive
+    }
+
+    // getter
+    this.getNomorAccount = function() {
+        return nomorAccount
+    }
+
+    this.getNama = function() {
+        return nama
+    }
+
+    this.getNik = function() {
+        return nik
+    }
+    
+    this.getStatusActive = function() {
+        return statusActive
+    }
 
 }
 
