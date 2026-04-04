@@ -41,45 +41,81 @@ function createAccount() {
 
 }
 
-// function enum statusActive() {
-//     INACTIVE, ACTIVE
-// }
+function account() {
+    let nomorAccount
+    let nama
+    let nik
+    let active
 
-// function account() {
-//     let nomorAccount
-//     let nama
-//     let nik
-//     let active
+    // setter & getter
+    // setter
+    this.setNomorAccount = function(inputNomorAccount) {
+        nomorAccount = inputNomorAccount
+    }
 
-//     // setter & getter
-// }
+    this.setNama = function(inputNama) {
+        nama = inputNama
+    }
+
+    this.setNik = function(inputNik) {
+        nik = inputNik
+    }
+
+    this.setActive = function(inputActive) {
+        active = inputActive
+    }
+
+    // getter
+    this.getNomorAccount = function() {
+        return nomorAccount
+    }
+
+    this.getNama = function() {
+        return nama
+    }
+
+    this.getNik = function() {
+        return nik
+    }
+
+    this.getActive = function() {
+        return active
+    }
+}
+
+const statusActive =  {
+    INACTIVE : "INACTIVE",
+    ACTIVE : "ACTIVE"
+}
+
+
 
 // 1. saat user memasukkan nik maka yang keluar malahan nik itu sendiri seharusnya tidak
 // 2. pada saat kirim nama malah yang keluar nik seharusnya tidak keluar nama
 // 3. user menuliskan nik sebanyak 16 karakter tapi gak bisa buat akun, 16 karakter tersebut adalah emang harus 16 karakter
 // 4. banyaknya list akun tapi malah force close atau hang, seharusnya bisa tahu berapa banyak list akun
 
-// function throwApaGitu() {
-//     if (createAccount === null || account.isempty()) {
-//         throw exception ("Akun tidak boleh kosong")
-//     }
+function validateAccount(input) {
+    if (input.getNomorAccount() === null || input.getNomorAccount().trim() === "") {
+        throw new Error ("Nomor Akun tidak boleh kosong")
+    }
 
-//     if (createAccount.name === null) {
-//         throw exception ("Nama akun tidak ada")
-//     }
+    if (input.getNama() === null || input.getNama().trim() === "" ) {
+        throw new Error ("Nama akun tidak boleh kosong")
+    }
 
-//     if (createAccount.nik === null || size.createAccount.nik === 16) {
-//         throw exception ("Nomor NIK tidak ada")
-//     }
+    if (input.getNik() === null || input.getNik().trim() === "" || input.getNik().length !== 16) {
+        throw new Error ("Nomor NIK harus 16 digit")
+    }
 
-//     let account = createAccount()
-//     account.createNomorAccount(getNomorAccount)
-//     account.createNama(getNama)
-//     account.createNik(getNIK)
-//     account.createStatusActice(getStatusActive)
+    let result = new account()
+    result.setNomorAccount(input.getNomorAccount())
+    result.setNama(input.getNama())
+    result.setNik(input.getNik())
+    result.setActive(statusActive.ACTIVE)
 
-
-// }
+    return result
+}
 
 // function banyaknyaAkun(list<Account> account) {
 //     let sizeaccount = size.account
