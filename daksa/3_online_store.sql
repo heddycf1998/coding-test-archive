@@ -5,6 +5,16 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Kapan user daftar
 );
 
+CREATE TABLE user_addresses (
+    id_address INT PRIMARY KEY AUTO_INCREMENT,
+    id_user INT,
+    label_alamat VARCHAR(50), -- Contoh: 'Rumah', 'Kantor', 'Kost'
+    alamat_lengkap TEXT,
+    is_primary BOOLEAN DEFAULT FALSE, -- Untuk alamat utama
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_user) REFERENCES users(id_user)
+);
+
 CREATE TABLE categories (
     id_category INT PRIMARY KEY AUTO_INCREMENT,
     nama_kategori VARCHAR(50),
@@ -41,12 +51,14 @@ CREATE TABLE cart_items (
 );
 
 CREATE TABLE orders (
-    id_order VARCHAR(10) PRIMARY KEY, -- Contoh: 'ORD-99'
+    id_order VARCHAR(10) PRIMARY KEY,
     id_user INT,
+    id_address INT,
     total_harga DECIMAL(12, 2),
-    tanggal_order DATE, -- <--- TAHUN & BULAN DIAMBIL DARI SINI
+    tanggal_order DATE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_user) REFERENCES users(id_user)
+    FOREIGN KEY (id_user) REFERENCES users(id_user),
+    FOREIGN KEY (id_address) REFERENCES user_addresses(id_address)
 );
 
 CREATE TABLE payments (
