@@ -68,3 +68,33 @@ CREATE TABLE payments (
     waktu_bayar TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Detik lunas
     FOREIGN KEY (id_order) REFERENCES orders(id_order)
 );
+
+--
+-- Soal 1 :
+-- Tampilkan total pendapatan dan jumlah barang (qty) yang terjual selama bulan Maret 2026.
+SELECT 
+    SUM(o.total_harga) AS total_pendapatan,
+    SUM(ci.qty) AS total_barang_terjual
+FROM orders o
+JOIN users u ON o.id_user = u.id_user
+JOIN carts c ON u.id_user = c.id_user
+JOIN cart_items ci ON c.id_cart = ci.id_cart
+WHERE MONTH(o.tanggal_order) = 3
+  AND YEAR(o.tanggal_order) = 2026
+  AND ci.status_item = "ORDERED"
+
+-- 
+-- Soal 2 :
+-- Tampilkan daftar nama produk yang pernah dibeli di bulan Maret 2026, tapi saat ini stoknya sisa kurang dari 5.
+SELECT DISTINCT
+    p.nama_produk,
+    p.stok
+FROM products p
+JOIN cart_items ci ON p.id_product = ci.id_product
+JOIN cart c ON ci.id_cart = c.id_cart
+JOIN users u ON c.id_user = u.id_user
+JOIN orders o ON o.id_user = u.id_user
+WHERE MONTH(o.tanggal_order) = 3
+    AND YEAR(O.tanggal_order) = 2026
+    AND ci.status_item = "ORDERED"
+    AND p.stok < 5
