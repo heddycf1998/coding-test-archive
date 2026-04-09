@@ -98,3 +98,34 @@ WHERE MONTH(o.tanggal_order) = 3
     AND YEAR(O.tanggal_order) = 2026
     AND ci.status_item = "ORDERED"
     AND p.stok < 5
+
+-- Soal 3 :
+-- Cari siapa saja User yang belanjaannya di bulan Maret itu di atas rata-rata belanjaan orang lain?
+SELECT
+    u.nama,
+    SUM(o.total_harga)
+FROM users u
+JOIN orders o ON u.id_user = o.id_user
+WHERE MONTH(o.tanggal_order) = 3
+GROUP BY u.id_user
+HAVING SUM(o.total_harga) > (
+    SELECT
+        AVG(total_harga)
+    FROM orders
+    WHERE MONTH(tanggal_order) = 3
+)
+
+-- Soal 4 :
+-- Tampilkan nama-nama user (nama saja) yang pernah melakukan pembelian barang dengan kategori 'Elektronik' pada bulan Januari 2026
+SELECT
+    u.nama
+FROM users u
+JOIN orders o ON o.id_user = u.id_user
+JOIN carts c ON c.id_user = u.id_user
+JOIN cart_items ci ON ci.id_cart = c.id_cart
+JOIN products p ON p.id_product = ci.id_product
+JOIN categories cat ON cat.id_category = p.id_category
+WHERE cat.nama_kategori = 'Elektronik'
+    AND MONTH(o.tanggal_order) = 1
+    AND YEAR(o.tanggal_order) = 2026
+GROUP BY u.id_user
