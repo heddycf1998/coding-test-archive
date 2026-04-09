@@ -1,0 +1,64 @@
+1. Seorang pengguna memasukkan 5 barang ke keranjang, tapi saat checkout dia hanya memilih 3 barang untuk dibayar. 
+Di tabel mana informasi mengenai 2 barang yang tidak jadi dibeli tersebut biasanya tetap tersimpan?
+
+A. Tabel cart_items
+B. Tabel categories
+C. Tabel payments
+D. Tabel orders
+
+Jawaban :
+A. Tabel cart_items
+Tabel ini menyimpan semua histori barang yang pernah dimasukkan ke keranjang.
+Baik yang jadi dibeli maupun yang masih tertunda (Pending).
+
+
+2. Apa fungsi utama dari kolom 'status_item' pada tabel cart_items dalam alur pembelian?
+
+A. Menghitung total harga seluruh produk di gudang
+B. Menyimpan bukti transfer dari bank
+C. Membedakan mana barang yang masih di keranjang (Pending) dan mana yang sudah masuk ke nota (Ordered)
+D. Menentukan apakah barang tersebut merupakan stok baru atau lama
+
+Jawaban :
+C. Membedakan mana barang yang masih di keranjang (Pending) dan mana yang sudah masuk ke nota (Ordered)
+Status ini krusial untuk memastikan sistem tahu barang mana yang harus ditagihkan 
+dan mana yang tetap ditinggalkan di keranjang
+
+
+3. Jika kita ingin menampilkan total pendapatan bulan Maret, 
+mengapa kita sebaiknya menggunakan tabel orders sebagai 'pintu masuk' (FROM) daripada tabel carts?
+
+A. Karena tabel carts hanya bisa menampung satu barang saja
+B. Karena tabel carts tidak memiliki ID User
+C. Karena tabel orders menyimpan data stok barang
+D. Karena tabel orders mencatat 'komitmen' pembelian dan total harga yang sudah bersifat final
+
+Jawaban :
+D. Karena tabel orders mencatat 'komitmen' pembelian dan total harga yang sudah bersifat final
+Orders adalah representasi nota resmi, 
+sedangkan carts hanya berisi rencana belanja yang belum tentu dibayar
+
+
+4. Setelah pengguna mendapatkan nomor nota (Order ID), dia melakukan transfer bank. 
+Informasi sukses atau gagalnya transfer tersebut akan dicatat di tabel mana?
+
+A. Tabel products
+B. Tabel user_addresses
+C. Tabel users
+D. Tabel payments
+
+Jawaban :
+D. Tabel payments
+Tabel ini berfungsi seperti kasir yang mencatat status pelunasan dari sebuah order
+
+
+5. Mengapa penggunaan JOIN sangat diperlukan saat ingin menampilkan nama produk yang dibeli oleh user tertentu?
+
+A. Karena satu tabel tidak mungkin memiliki kolom nama produk dan nama user sekaligus secara efisien
+B. Karena perintah SELECT tidak bisa berjalan tanpa JOIN
+C. Karena semua tabel dalam database wajib disambungkan setiap saat
+D. Agar proses penghapusan data menjadi lebih cepat
+
+Jawaban :
+A. Karena satu tabel tidak mungkin memiliki kolom nama produk dan nama user sekaligus secara efisien
+Database relasional memisahkan data agar tidak ada pengulangan informasi yang boros memori(normalisasi)
