@@ -129,3 +129,21 @@ WHERE cat.nama_kategori = 'Elektronik'
     AND MONTH(o.tanggal_order) = 1
     AND YEAR(o.tanggal_order) = 2026
 GROUP BY u.id_user
+
+-- Soal 5 :
+-- Tampilkan daftar nama produk dan total uang yang didapatkan dari produk tersebut, 
+-- HANYA untuk transaksi yang status pembayarannya sudah 'SUCCESS' (Lunas) pada bulan Maret 2026
+SELECT
+    p.nama_produk,
+    SUM(p.harga * ci.qty) AS total_pendapatan
+FROM products p
+JOIN cart_items ci ON ci.id_product = p.id_product
+JOIN cart c ON c.id_cart = ci.id_cart
+JOIN users u ON u.id_user = c.id_user
+JOIN orders o ON o.id_user = u.id_user
+JOIN payments pay ON pay.id_order = o.id_order
+WHERE pay.status_bayar = "SUCCESS"
+    AND ci.status_item = "ORDERED"
+    AND MONTH(pay.waktu_bayar) = 3
+    AND YEAR(pay.waktu_bayar) = 2026
+GROUP BY p.id_product
