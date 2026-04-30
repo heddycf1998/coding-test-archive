@@ -1,0 +1,7 @@
+Urutkan Prioritas :
+- Login
+- Transfer
+- Notifikasi
+- Update Profile
+
+Manakah Prioritas utama dan mengapa ?

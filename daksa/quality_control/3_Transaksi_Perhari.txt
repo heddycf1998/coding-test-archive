@@ -1,0 +1,4 @@
+"Transaksi perhari maksimal Rp 25.000.000 perhari"
+- Buat pertanyaan klarifikasi (5 pertanyaan)
+- Test Scenario
+- Scenario Negatif

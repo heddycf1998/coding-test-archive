@@ -1,0 +1,9 @@
+// Api
+{
+    "from_account" : "123",
+    "to_account" : "456",
+    "amount" : 100000
+}
+Buatkan :
+- Test Scenario
+- Negatif Scenario
