@@ -1,0 +1,14 @@
+table customer
+    id
+    name
+
+table product
+    id
+    name
+    sku
+
+
+output :
+customer 2 Nana Chan
+customer 5 Bam Bim Bom
+product 1 Menantea Cup Milk

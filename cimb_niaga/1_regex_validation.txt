@@ -1,0 +1,9 @@
+
+regex('_____')
+
+function main () {
+    // dah ada isinya
+}
+
+output :
+1 + 2 + 3 + 4 = 10
