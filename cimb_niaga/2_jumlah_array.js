@@ -10,3 +10,11 @@ for (let i = 0; i < a.length; i++) {
 }
 
 console.log(jumlah)
+
+function answer(___) {
+     // Write Your Code Here
+}
+
+function main(a, b) {
+     return // ini tuh udah ada dari soalnya
+}
