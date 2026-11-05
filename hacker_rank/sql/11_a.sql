@@ -3,4 +3,12 @@ SELECT
 FROM
     STATION
 WHERE CITY REGEXP '^[aeiouAEIOU]'
-ORDER BY CITY ASC
+ORDER BY CITY ASC;
+
+-- atau
+SELECT
+    DISTINCT(CITY)
+FROM
+    STATION
+WHERE LEFT(CITY, 1) IN ('a', 'i', 'u', 'e', 'o', 'A', 'I', 'U', 'E', 'O')
+ORDER BY CITY ASC;
